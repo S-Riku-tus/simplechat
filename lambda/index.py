@@ -58,7 +58,7 @@ def lambda_handler(event, context):
             method="POST"
         )
 
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=40) as resp:
             resp_body = resp.read().decode("utf-8")
         api_resp = json.loads(resp_body)
         # FastAPI のレスポンスが GenerationResponse 型 => {"generated_text": "...", "response_time": ...}
