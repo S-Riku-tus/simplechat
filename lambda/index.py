@@ -75,6 +75,7 @@ def lambda_handler(event, context):
             "content": message
         })
 
+
         messages.append({
             "role": "assistant",
             "content": assistant_response
